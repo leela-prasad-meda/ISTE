@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced To‑Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>My Tasks</h1>
+        <button id="themeToggle">🌙</button>
+    </header>
+
+    <!-- Add Task Section -->
+    <div class="input-box">
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <select id="category">
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Shopping">Shopping</option>
+        </select>
+        <button onclick="addTask()">Add</button>
+    </div>
+
+    <!-- Filters -->
+    <div class="filter-box">
+        <input type="text" id="search" placeholder="Search tasks" onkeyup="filterTasks()">
+        <select id="filterCategory" onchange="filterTasks()">
+            <option value="All">All</option>
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Shopping">Shopping</option>
+        </select>
+    </div>
+
+    <!-- Task List -->
+    <div class="task-container">
+        <ul id="taskList"></ul>
+        <p id="emptyMessage" class="empty">No tasks yet</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
